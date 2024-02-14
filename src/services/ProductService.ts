@@ -1,3 +1,4 @@
+const apiUri = process.env.NEXT_PUBLIC_BASE_URL as string;
 const existingCartData = () => JSON.parse(localStorage.getItem("cart") || "[]");
 
 export function cropTextLong(text: string) {
@@ -14,12 +15,12 @@ export function usdToRupiah(usdAmount: number) {
 }
 
 export async function getProductsSearch(query: string) {
-  const res = fetch(`https://dummyjson.com/products/search?q=${query}`);
+  const res = fetch(`${apiUri}/products/search?q=${query}`);
   return (await res).json();
 }
 
 export const cartHandle = async (id: number) => {
-  await fetch(`https://dummyjson.com/products/${id}`)
+  await fetch(`${apiUri}/products/${id}`)
     .then((res) => res.json())
     .then((result: any) => {
       const cart = existingCartData();
