@@ -13,7 +13,7 @@ type PropsProductList = {
 const ProducstList = ({ data }: PropsProductList) => {
   return (
     <div>
-      <div className="flex flex-wrap justify-center lg:justify-normal gap-5">
+      <div className="flex flex-wrap justify-center lg:justify-normal gap-3">
         {data.map((e, i) => (
           <div
             key={i}
