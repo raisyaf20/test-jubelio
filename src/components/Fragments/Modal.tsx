@@ -54,7 +54,7 @@ const ModalComp = ({ setToggle }: PropsToggle) => {
 
         {data?.length ? (
           <div className="flex flex-col p-7 gap-3">
-            {data.map((e: DataProduct, i) => (
+            {data.map((e, i) => (
               <div
                 key={i}
                 className="w-full h-[100px] relative max-w-[811px] flex flex-wrap items-center justify-between border rounded-md border-[#CFCFCF]"
