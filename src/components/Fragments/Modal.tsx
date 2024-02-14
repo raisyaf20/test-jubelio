@@ -15,7 +15,7 @@ export type PropsToggle = {
 };
 
 const ModalComp = ({ setToggle }: PropsToggle) => {
-  const [data, setData] = useState<null | DataProduct[]>(null);
+  const [data, setData] = useState<null | any[]>(null);
   const contextValue = useContext(Context);
   const { cart }: CartContextTypes = contextValue || { cart: [] };
 
